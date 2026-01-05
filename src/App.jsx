@@ -92,6 +92,7 @@ import Loader from './components/Loader';
 import Lenis from 'lenis';
 import { AnimatePresence } from 'framer-motion';
 import Stars from './components/Stars';
+import WhyMe from './components/WhyMe';
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -134,7 +135,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        {/* <WhyMe /> */}
+        <WhyMe />
         <Contact />
       </main>
       <Footer />

@@ -65,7 +65,7 @@ const Hero = ({ show }) => {
               backgroundColor: 'var(--glass-bg)',
             }}
           >
-            Full Stack Web Developer
+            Frontend Web Developer
           </motion.span>
           
           <motion.div variants={itemVariants} className="mb-8 w-full max-w-full overflow-hidden">
@@ -78,7 +78,7 @@ const Hero = ({ show }) => {
             className="text-base md:text-lg font-medium mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed uppercase tracking-widest"
             style={{ color: 'var(--text-tertiary)' }}
           >
-            Developing high-performance, responsive <br className="hidden md:block" /> MERN stack applications for the global market.
+            Specializing in <span style={{ color: 'var(--accent-color)' }}>React.js</span>, <span style={{ color: 'var(--accent-color)' }}>Next.js</span>, and the <span style={{ color: 'var(--accent-color)' }}>MERN Stack</span>.<br className="hidden md:block" />I build responsive, high-performance web applications with clean code and exceptional user experience.
           </motion.p>
 
           <motion.div
@@ -97,7 +97,7 @@ const Hero = ({ show }) => {
             
             <Magnetic strength={0.3}>
               <a 
-                href="https://drive.google.com/file/d/1skRkwiRIw-UZcK8Quc59kwqYcZL4OE8h/view?usp=drive_link" 
+                href="#" 
                 download 
                 className="px-8 py-5 rounded-full text-xs font-black tracking-[0.2em] uppercase transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
                 style={{

@@ -94,11 +94,11 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-xl md:text-2xl lg:text-5xl font-black mb-6 md:mb-8 uppercase font-display tracking-tighter" style={{ color: 'var(--text-primary)' }}>
-                        SKILLS<span style={{ color: 'var(--accent-color)' }}>.</span>
+                    <h2 className="text-xl md:text-2xl lg:text-4xl font-black mb-6 md:mb-8 uppercase font-display tracking-tighter" style={{ color: 'var(--text-primary)' }}>
+                        Technical Skill <span style={{ color: 'var(--accent-color)' }}>.</span>
                     </h2>
-                    <p className="text-base md:text-lg font-bold uppercase tracking-[0.4em]" style={{ color: 'var(--text-tertiary)' }}>
-                        OFFICIAL TOOLS OF THE TRADE.
+                    <p className="text-base md:text-lg font-bold tracking-[0.4em]" style={{ color: 'var(--text-tertiary)' }}>
+                        Official Tools of the trade.
                     </p>
                 </motion.div>
             </div>

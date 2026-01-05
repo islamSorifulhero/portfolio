@@ -43,7 +43,7 @@ const Loader = ({ onLoadingComplete }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary-500"
           >
-            DevShuvo
+            SORIFUL
           </motion.h1>
         </div>
         

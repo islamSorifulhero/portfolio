@@ -1,27 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import project1 from '../assets/banner-main.png'
-import project2 from '../assets/logo-footer.png'
+import project1 from '../assets/project1.jpg'
+import project2 from '../assets/project2.jpg'
 import Magnetic from './Magnetic';
 import { cn } from '../lib/utils';
 
 const projects = [
   {
-    title: 'LOCAL CHEF BAZAAR',
-    description: 'A PREMIUM MARKETPLACE FOR HOME-COOKED MEALS WITH REAL-TIME PRE-ORDERING AND STRIPE SECURE PAYMENTS.',
-    tech: ['MERN', 'STRIPE', 'FIREBASE'],
+    title: 'Garments Project',
+    description: 'Garments Order & Production Tracker System.',
+    tech: ['REACT', 'FIREBASE', 'NODE', 'EXPRESS'],
     image: project1,
-    live: '#',
-    github: '#',
+    live: 'https://sunny-axolotl-1dff72.netlify.app',
+    github: 'https://github.com/islamSorifulhero/client-side-project',
   },
   {
-    title: 'GAME SPACE',
-    description: 'A NEXT-GEN GAMING PLATFORM FEATURING VIBRANT GAME CARDS, NEON ACCENTS, AND A MINIMALIST PREMIUM INTERFACE.',
-    tech: ['REACT', 'GSAP', 'FIREBASE'],
+    title: 'Cleanliness Community',
+    description: 'Community Cleanliness & Issue Reporting Portal.',
+    tech: ['REACT', 'FIREBASE', 'NODE', 'EXPRESS'],
     image: project2,
-    live: 'https://game-space-bd.netlify.app/games',
-    github: '#',
+    live: 'https://animated-cat-0a19c2.netlify.app/',
+    github: 'https://github.com/islamSorifulhero/client',
   },
 ];
 
@@ -37,11 +37,11 @@ const Projects = () => {
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black mb-4 md:mb-6 uppercase font-display break-words tracking-tighter" style={{ color: 'var(--text-primary)' }}>
-              WORK<span style={{ color: 'var(--accent-color)' }}>.</span>
+            <h2 className="text-2xl md:text-2xl lg:text-4xl font-black mb-4 md:mb-6 uppercase font-display break-words tracking-tighter" style={{ color: 'var(--text-primary)' }}>
+              Latest Work<span style={{ color: 'var(--accent-color)' }}>.</span>
             </h2>
-            <p className="text-base md:text-lg font-bold uppercase tracking-[0.3em]" style={{ color: 'var(--text-tertiary)' }}>
-              SELECTED PROJECTS DELIVERING HIGH VALUE.
+            <p className="text-base md:text-lg font-bold tracking-[0.3em]" style={{ color: 'var(--text-tertiary)' }}>
+              Selected Projects Delivering High Value.
             </p>
           </motion.div>
         </div>

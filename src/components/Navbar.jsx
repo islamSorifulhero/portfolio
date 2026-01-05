@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-
-
-import logo from '../assets/logo.png';
+import logo from '../assets/react.svg';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -51,7 +49,7 @@ const Navbar = ({ show }) => {
           style={{ color: 'var(--text-primary)' }}
         >
           <img src={logo} alt="Shuvo Logo" className="w-8 h-8 object-contain" />
-          <span>MALLIK<span style={{ color: 'var(--accent-color)' }}>.</span></span>
+          <span>SORIFUL<span style={{ color: 'var(--accent-color)' }}>.</span></span>
         </motion.a>
 
         {/* Desktop Nav */}

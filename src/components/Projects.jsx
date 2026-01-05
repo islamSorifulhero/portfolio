@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import project1 from '../assets/project1.jpg'
 import project2 from '../assets/project2.jpg'
+import project3 from '../assets/Project3.jpg'
 import Magnetic from './Magnetic';
 import { cn } from '../lib/utils';
 
@@ -20,8 +21,16 @@ const projects = [
     description: 'Community Cleanliness & Issue Reporting Portal.',
     tech: ['REACT', 'FIREBASE', 'NODE', 'EXPRESS'],
     image: project2,
-    live: 'https://animated-cat-0a19c2.netlify.app/',
+    live: 'https://animated-cat-0a19c2.netlify.app',
     github: 'https://github.com/islamSorifulhero/client',
+  },
+  {
+    title: 'appverse',
+    description: 'It serves as the official app store.',
+    tech: ['REACT', 'FIREBASE', 'NODE', 'EXPRESS'],
+    image: project3,
+    live: 'https://appvers.netlify.app',
+    github: 'https://github.com/islamSorifulhero/appverse',
   },
 ];
 

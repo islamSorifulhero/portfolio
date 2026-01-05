@@ -25,6 +25,7 @@ const Contact = () => {
               { label: 'EMAIL', value: 'islamsoriful.hero@gmail.com', icon: <Mail size={20} />, href: 'islamsoriful.hero@gmail.com' },
               { label: 'LINKEDIN', value: 'linkedin.com/in/md-soriful-islam-hero', icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/md-soriful-islam-hero' },
               { label: 'GITHUB', value: 'github.com/islamSorifulhero', icon: <Github size={20} />, href: 'https://github.com/islamSorifulhero' },
+              { label: 'MOBIL', value: '01518713398', icon: <mobil size={20} />, href: '01518713398' },
             ].map((item, i) => (
               item.href ? (
                 <motion.a 

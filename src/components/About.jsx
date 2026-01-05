@@ -17,12 +17,20 @@ const About = () => {
                     </h2>
                     <div className="space-y-6 md:space-y-10 text-base md:text-l leading-relaxed font-medium tracking-widest" style={{ color: 'var(--text-tertiary)' }}>
                         <p>
-                            Hi! I’m a passionate MERN Stack Developer who began exploring the inner workings of websites and applications out of sheer curiosity. Over the years, I developed a deep love for problem-solving.
+                            Hi! I’m a passionate MERN Stack Developer who began exploring the inner workings
+                            of websites and applications out of sheer curiosity. My programming journey
+                            started with learning the fundamentals of HTML and CSS, which helped me
+                            understand how the web works. As my interest grew, I moved on to JavaScript and
+                            eventually started building dynamic applications using React, Node.js, Express,
+                            and MongoDB.
                         </p>
                         <p>
-                            I enjoy working on projects where I can leverage JavaScript, React, Node.js, MongoDB along with modern UI frameworks like Tailwind CSS.
+                            I enjoy working on projects where I can combine logic with creativity. Problem-solving and turning ideasinto functional digital products are the aspects of development I enjoy the most. <br /><br />
 
-                            Outside of coding, I love traveling and exploring new places, which refreshes my mind and sparks creativity. I also enjoy learning new technologies.
+                            Outside of coding, I love traveling and exploring new places, which refreshes my
+                            mind and inspires creativity. I also enjoy learning new technologies and staying
+                            up to date with modern development trends. I consider myself a continuous
+                            learner with a strong work ethic and a collaborative mindset.
                         </p>
                         <p className="pl-6 md:pl-8 py-3 font-black rounded-r-2xl" style={{ borderLeft: '4px solid var(--accent-color)', color: 'var(--text-primary)', backgroundColor: 'var(--glass-bg)' }}>
                             FULLY EQUIPPED FOR GLOBAL REMOTE COLLABORATION.
@@ -36,7 +44,7 @@ const About = () => {
                         <div className="space-y-3">
                             <div>
                                 <p className="font-black text-sm md:text-md tracking-tighter font-display" style={{ color: 'var(--text-primary)' }}>
-                                    Study at B.Sc - Honours in Botany at Govt.Titumir College, Dhaka University
+                                    Studying at B.Sc - Honours in Botany at Govt.Titumir College, Dhaka University
                                 </p>
                                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-1">
                                     <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--text-tertiary)' }}>

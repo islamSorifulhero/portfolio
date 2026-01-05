@@ -13,7 +13,7 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <h3 className="text-sm md:text-lg font-black mb-4 md:mb-6 tracking-tighter uppercase font-display" style={{ color: 'var(--text-primary)' }}>LET'S CONNECT</h3>
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-black mb-6 md:mb-8 font-display break-words uppercase tracking-tighter" style={{ color: 'var(--text-primary)' }}>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 md:mb-8 font-display break-words uppercase tracking-tighter" style={{ color: 'var(--text-primary)' }}>
             HIRE<span style={{ color: 'var(--accent-color)' }}>.</span>
           </h2>
           <p className="text-base md:text-xl font-bold uppercase tracking-widest mb-10 md:mb-16 leading-relaxed max-w-md" style={{ color: 'var(--text-tertiary)' }}>
@@ -22,9 +22,9 @@ const Contact = () => {
 
           <div className="space-y-10">
             {[
-              { label: 'EMAIL', value: 'shuvomallik999@gmail.com', icon: <Mail size={20} />, href: 'mailto:shuvomallik999@gmail.com' },
-              { label: 'LINKEDIN', value: 'linkedin.com/in/shuvo-mallik', icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/shuvo-mallik/' },
-              { label: 'GITHUB', value: 'github.com/shuvomallik', icon: <Github size={20} />, href: 'https://github.com/devShuvo25' },
+              { label: 'EMAIL', value: 'islamsoriful.hero@gmail.com', icon: <Mail size={20} />, href: 'islamsoriful.hero@gmail.com' },
+              { label: 'LINKEDIN', value: 'linkedin.com/in/md-soriful-islam-hero', icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/md-soriful-islam-hero' },
+              { label: 'GITHUB', value: 'github.com/islamSorifulhero', icon: <Github size={20} />, href: 'https://github.com/islamSorifulhero' },
             ].map((item, i) => (
               item.href ? (
                 <motion.a 
@@ -81,7 +81,7 @@ const Contact = () => {
             borderRadius: '1.5rem',
           }}
         >
-          <form className="space-y-8 md:space-y-12" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-8 md:space-y-8" onSubmit={(e) => e.preventDefault()}>
             <div className="space-y-2 md:space-y-4">
               <label className="text-[10px] font-black tracking-[0.4em] uppercase" style={{ color: 'var(--text-tertiary)' }}>Your Name</label>
               <input 

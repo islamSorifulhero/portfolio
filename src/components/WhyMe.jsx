@@ -5,7 +5,7 @@ import { Briefcase, Code, Cloud, Users, Award, ShieldCheck, Zap } from 'lucide-r
 const reasons = [
   {
     icon: <Code className="w-8 h-8 text-accent" />,
-    title: 'FULL STACK MASTERY',
+    title: 'Frontend Developer',
     description: 'DEEP EXPERTISE IN THE MERN STACK AND MODERN DEVELOPMENT PARADIGMS FOR ROBUST APPS.',
   },
   {
@@ -29,11 +29,11 @@ const WhyMe = () => {
   return (
     <section id="why-me" className="section-padding py-20 md:py-32" style={{ borderTop: '1px solid var(--border-color)' }}>
       <div className="mb-16 md:mb-24">
-        <h2 className="text-2xl md:text-3xl lg:text-5xl font-black mb-4 md:mb-6 uppercase leading-none font-display break-words tracking-tighter" style={{ color: 'var(--text-primary)' }}>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 md:mb-6 uppercase leading-none font-display break-words tracking-tighter" style={{ color: 'var(--text-primary)' }}>
           STRATEGY<span style={{ color: 'var(--accent-color)' }}>.</span>
         </h2>
-        <p className="text-sm md:text-lg font-bold uppercase tracking-widest" style={{ color: 'var(--text-tertiary)' }}>
-          WHY I AM THE STRATEGIC FIT FOR YOUR GLOBAL TEAM.
+        <p className="text-sm md:text-lg font-bold tracking-widest" style={{ color: 'var(--text-tertiary)' }}>
+          Why I am the strategic fit for your Global Team.
         </p>
       </div>
 
@@ -63,7 +63,7 @@ const WhyMe = () => {
             >
               <div className="mb-10 group-hover:scale-110 transition-transform duration-700" style={{ color: 'var(--accent-color)' }}>{reason.icon}</div>
               <h3 className="text-lg font-black mb-6 tracking-tighter uppercase font-display group-hover:text-accent transition-colors" style={{ color: 'var(--text-primary)' }}>{reason.title}</h3>
-              <p className="font-bold text-xs uppercase tracking-widest leading-loose" style={{ color: 'var(--text-tertiary)' }}>
+              <p className="font-bold text-xs lowercase tracking-widest leading-loose" style={{ color: 'var(--text-tertiary)' }}>
                 {reason.description}
               </p>
             </motion.div>

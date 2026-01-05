@@ -4,14 +4,14 @@ import { Github, Linkedin, Twitter, Mail, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Github size={18} />, href: "https://github.com" },
-    { icon: <Linkedin size={18} />, href: "https://linkedin.com" },
+    { icon: <Github size={18} />, href: "https://github.com/islamSorifulhero" },
+    { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/md-soriful-islam-hero" },
     { icon: <Twitter size={18} />, href: "https://twitter.com" },
-    { icon: <Mail size={18} />, href: "mailto:shuvo@example.com" },
+    { icon: <Mail size={18} />, href: "islamsoriful.hero@gmail.com" },
   ];
 
   return (
-    <footer className="py-12" style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)' }}>
+    <footer className="py-2" style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)' }}>
       <div className="section-padding flex flex-col md:flex-row items-center justify-between gap-8">
         <motion.div 
           animate={{ y: [0, -5, 0] }}

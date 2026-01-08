@@ -144,7 +144,7 @@ const Navbar = ({ show }) => {
                       LINKEDIN
                     </a>
                     <a 
-                      href="github.com/islamSorifulhero" 
+                      href="https://github.com/islamSorifulhero" 
                       target="_blank" 
                       className="text-xs font-bold uppercase tracking-widest transition-colors"
                       style={{ color: 'var(--text-primary)' }}

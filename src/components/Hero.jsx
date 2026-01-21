@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Download } from 'lucide-react';
 import soriful from '../assets/soriful.png.jpg'
-// import hero from '../assets/hero-removebg-preview (2).png'
-// import hero from '../assets/Group.png'
 import Magnetic from './Magnetic';
 
 const Hero = ({ show }) => {
@@ -65,11 +63,11 @@ const Hero = ({ show }) => {
               backgroundColor: 'var(--glass-bg)',
             }}
           >
-            Frontend Web Developer
+            Full Stack Developer
           </motion.span>
           
           <motion.div variants={itemVariants} className="mb-8 w-full max-w-full overflow-hidden">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter mb-4 font-display break-words" style={{ color: 'var(--text-primary)' }}>SORIFUL <br /> ISLAM<span style={{ color: 'var(--accent-color)' }}>.</span>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-black leading-[1.1] tracking-tighter mb-4 font-display break-words" style={{ color: 'var(--text-primary)' }}>MD<span style={{ color: 'var(--accent-color)' }}>.</span> SORIFUL <br /> ISLAM
             </h1>
           </motion.div>
 
@@ -97,7 +95,7 @@ const Hero = ({ show }) => {
             
             <Magnetic strength={0.3}>
               <a 
-                href="#" 
+                href="public/Resume of MD. SORIFUL ISLAM.pdf" 
                 download 
                 className="px-8 py-5 rounded-full text-xs font-black tracking-[0.2em] uppercase transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
                 style={{

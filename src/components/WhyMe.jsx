@@ -5,7 +5,7 @@ import { Briefcase, Code, Cloud, Users, Award, ShieldCheck, Zap } from 'lucide-r
 const reasons = [
   {
     icon: <Code className="w-8 h-8 text-accent" />,
-    title: 'Frontend Developer',
+    title: 'Full Stack Developer',
     description: 'DEEP EXPERTISE IN THE MERN STACK AND MODERN DEVELOPMENT PARADIGMS FOR ROBUST APPS.',
   },
   {

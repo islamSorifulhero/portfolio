@@ -133,7 +133,9 @@ const Navbar = ({ show }) => {
                     SOCIALS
                   </p>
                   <div className="flex gap-6">
-                    <a 
+
+
+                    {/* <a 
                       href="https://www.linkedin.com/in/md-soriful-islam-hero" 
                       target="_blank" 
                       className="text-xs font-bold uppercase tracking-widest transition-colors"
@@ -142,7 +144,9 @@ const Navbar = ({ show }) => {
                       onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}
                     >
                       LINKEDIN
-                    </a>
+                    </a> */}
+
+
                     <a 
                       href="https://github.com/islamSorifulhero" 
                       target="_blank" 

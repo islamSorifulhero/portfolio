@@ -95,8 +95,8 @@ const Hero = ({ show }) => {
             
             <Magnetic strength={0.3}>
               <a 
-                href="public/Resume of MD. SORIFUL ISLAM.pdf" 
-                download 
+                href="/public/Resume of MD. SORIFUL ISLAM.pdf" 
+                download="MD. Soriful Islam-Resume.pdf" 
                 className="px-8 py-5 rounded-full text-xs font-black tracking-[0.2em] uppercase transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
                 style={{
                   border: '1px solid var(--border-color)',

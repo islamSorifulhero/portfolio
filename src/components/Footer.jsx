@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, Mail, Instagram } from 'lucide-react';
 const Footer = () => {
   const socialLinks = [
     { icon: <Github size={18} />, href: "https://github.com/islamSorifulhero" },
-    { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/md-soriful-islam-hero" },
+    // { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/md-soriful-islam-hero" },
     { icon: <Twitter size={18} />, href: "https://twitter.com" },
     { icon: <Mail size={18} />, href: "islamsoriful.hero@gmail.com" },
   ];
@@ -19,10 +19,10 @@ const Footer = () => {
           className="flex flex-col items-center md:items-start"
         >
           <h3 className="text-xl font-black tracking-tighter font-display" style={{ color: 'var(--text-primary)' }}>
-            MD SORIFUL ISLAM<span style={{ color: 'var(--accent-color)' }}>.</span>
+            MD<span style={{ color: 'var(--accent-color)' }}>.</span> SORIFUL ISLAM
           </h3>
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] mt-1" style={{ color: 'var(--text-tertiary)' }}>
-            Front-end Web Developer
+            Full Stack Web Developer
           </p>
         </motion.div>
 

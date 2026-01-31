@@ -66,9 +66,9 @@ const Contact = () => {
               },
               {
                 label: 'MOBILE',
-                value: '01518-713398',
+                value: '01518-713398 || 01770-886813',
                 icon: <Phone size={20} />,
-                href: 'tel:01518713398',
+                href: 'tel:01518713398 || 01770886813',
               },
             ].map((item, i) => (
               <motion.a

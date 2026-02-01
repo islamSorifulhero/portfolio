@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, Mail, Instagram } from 'lucide-react';
 const Footer = () => {
   const socialLinks = [
     { icon: <Github size={18} />, href: "https://github.com/islamSorifulhero" },
-    // { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/md-soriful-islam-hero" },
+    { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/md-soriful-islam-hero2" },
     { icon: <Twitter size={18} />, href: "https://twitter.com" },
     { icon: <Mail size={18} />, href: "islamsoriful.hero@gmail.com" },
   ];

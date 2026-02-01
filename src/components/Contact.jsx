@@ -52,12 +52,6 @@ const Contact = () => {
                 icon: <Mail size={20} />,
                 href: 'mailto:islamsoriful.hero@gmail.com',
               },
-              // {
-              //   label: 'LINKEDIN',
-              //   value: 'linkedin.com/in/md-soriful-islam-hero',
-              //   icon: <Linkedin size={20} />,
-              //   href: 'https://www.linkedin.com/in/md-soriful-islam-hero',
-              // },
               {
                 label: 'GITHUB',
                 value: 'github.com/islamSorifulhero',
@@ -65,8 +59,14 @@ const Contact = () => {
                 href: 'https://github.com/islamSorifulhero',
               },
               {
+                label: 'LINKEDIN',
+                value: 'linkedin.com/in/md-soriful-islam-hero2',
+                icon: <Linkedin size={20} />,
+                href: 'https://www.linkedin.com/in/md-soriful-islam-hero2',
+              },
+              {
                 label: 'MOBILE',
-                value: '01518-713398 || 01770-886813',
+                value: '01770-886813 || 01518-713398',
                 icon: <Phone size={20} />,
                 href: 'tel:01518713398 || 01770886813',
               },

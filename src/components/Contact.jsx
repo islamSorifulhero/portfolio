@@ -54,13 +54,13 @@ const Contact = () => {
               },
               {
                 label: 'GITHUB',
-                value: 'github.com/islamSorifulhero',
+                value: '@islamSorifulhero',
                 icon: <Github size={20} />,
                 href: 'https://github.com/islamSorifulhero',
               },
               {
                 label: 'LINKEDIN',
-                value: 'linkedin.com/in/md-soriful-islam-hero2',
+                value: '@md-soriful-islam-hero2',
                 icon: <Linkedin size={20} />,
                 href: 'https://www.linkedin.com/in/md-soriful-islam-hero2',
               },

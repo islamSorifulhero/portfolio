@@ -129,7 +129,7 @@ const Hero = ({ show }) => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
           style={{ x: mousePosition.x, y: mousePosition.y }}
-          className="relative w-full flex justify-center lg:justify-end lg:pr-12 order-first lg:order-last mb-12 lg:mb-0 -mt-48 md:mt-0"
+          className="relative w-full flex justify-center lg:justify-end lg:pr-12 order-first lg:order-last mb-12 lg:mb-0 -mt-38 md:mt-0"
         >
           <div 
             className="relative z-10 w-full max-w-[350px] md:max-w-[450px] lg:max-w-[550px] aspect-square transition-all duration-700 pointer-events-none"

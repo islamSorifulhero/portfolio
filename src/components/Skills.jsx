@@ -86,7 +86,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <section id="skills" className="section-padding py-24 md:py-32" style={{ borderTop: '1px solid var(--border-color)', backgroundColor: 'var(--bg-primary)' }}>
+        <section id="skills" className="section-padding py-4 md:py-12" style={{ borderTop: '1px solid var(--border-color)', backgroundColor: 'var(--bg-primary)' }}>
             <div className="mb-16 md:mb-24">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -94,12 +94,9 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-xl md:text-2xl lg:text-4xl font-black mb-6 md:mb-8 uppercase font-display tracking-tighter" style={{ color: 'var(--text-primary)' }}>
-                        Technical Skill <span style={{ color: 'var(--accent-color)' }}>.</span>
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-black mb-4">
+                        Technical Skill<span className="text-accent">.</span>
                     </h2>
-                    <p className="text-base md:text-lg font-bold tracking-[0.4em]" style={{ color: 'var(--text-tertiary)' }}>
-                        Official Tools of the trade.
-                    </p>
                 </motion.div>
             </div>
 

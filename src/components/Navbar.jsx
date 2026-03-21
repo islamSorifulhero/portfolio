@@ -42,7 +42,7 @@ const Navbar = ({ show }) => {
       }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <motion.a 
+        <motion.a
           initial={{ opacity: 0, x: -20 }}
           animate={show ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -70,12 +70,12 @@ const Navbar = ({ show }) => {
               {link.name}
             </motion.a>
           ))}
-          
+
         </div>
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center gap-4">
-          
+
           <button onClick={() => setIsOpen(!isOpen)} style={{ color: 'var(--text-primary)' }}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -94,7 +94,7 @@ const Navbar = ({ show }) => {
               className="fixed inset-0 backdrop-blur-xl z-[-1] md:hidden"
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
             />
-            
+
             {/* Drawer Content */}
             <motion.div
               initial={{ x: '100%' }}
@@ -135,21 +135,9 @@ const Navbar = ({ show }) => {
                   <div className="flex gap-6">
 
 
-                    {/* <a 
-                      href="https://www.linkedin.com/in/md-soriful-islam-hero" 
-                      target="_blank" 
-                      className="text-xs font-bold uppercase tracking-widest transition-colors"
-                      style={{ color: 'var(--text-primary)' }}
-                      onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'}
-                      onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}
-                    >
-                      LINKEDIN
-                    </a> */}
-
-
-                    <a 
-                      href="https://github.com/islamSorifulhero" 
-                      target="_blank" 
+                    <a
+                      href="https://github.com/islamSorifulhero"
+                      target="_blank"
                       className="text-xs font-bold uppercase tracking-widest transition-colors"
                       style={{ color: 'var(--text-primary)' }}
                       onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'}
@@ -160,9 +148,9 @@ const Navbar = ({ show }) => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Close Button Inside Drawer */}
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="absolute top-8 right-8 p-2 rounded-full transition-colors"
                 style={{ color: 'var(--text-primary)' }}

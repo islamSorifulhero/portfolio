@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import project1 from '../assets/project1.jpg'
-import project2 from '../assets/project2.jpg'
-import project3 from '../assets/Project3.jpg'
+import project1 from '../assets/project1.jpg';
+import project2 from '../assets/project2.jpg';
+import project3 from '../assets/Project3.jpg';
 import Magnetic from './Magnetic';
 import { cn } from '../lib/utils';
 
@@ -38,106 +38,110 @@ const Projects = () => {
   const [activeIdx, setActiveIdx] = React.useState(null);
 
   return (
-    <section id="projects" className="section-padding py-24 md:py-32" style={{ borderTop: '1px solid var(--border-color)' }}>
-      <div className="mb-16 md:mb-24">
-          <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-2xl md:text-2xl lg:text-4xl font-black mb-4 md:mb-6 uppercase font-display break-words tracking-tighter" style={{ color: 'var(--text-primary)' }}>
-              Latest Work<span style={{ color: 'var(--accent-color)' }}>.</span>
-            </h2>
-            <p className="text-base md:text-lg font-bold tracking-[0.3em]" style={{ color: 'var(--text-tertiary)' }}>
-              Selected Projects Delivering High Value.
-            </p>
-          </motion.div>
-        </div>
+    <section
+      id="projects"
+      className="px-4 sm:px-6 md:px-10 lg:px-20 py-16 md:py-24"
+      style={{ borderTop: '1px solid var(--border-color)' }}
+    >
+      {/* Heading */}
+      <div className="mb-12 md:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4 uppercase tracking-tight">
+            Latest Work<span style={{ color: 'var(--accent-color)' }}>.</span>
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base font-bold tracking-widest text-gray-400">
+            Selected Projects Delivering High Value.
+          </p>
+        </motion.div>
+      </div>
 
-      <div className="grid gap-20 lg:gap-32">
+      {/* Projects */}
+      <div className="space-y-16 md:space-y-24">
         {projects.map((project, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ 
-              opacity: { duration: 1.5, ease: [0.16, 1, 0.3, 1] },
-              y: { duration: 1.5, ease: [0.16, 1, 0.3, 1] }
-            }}
-            viewport={{ once: true, margin: "-10%" }}
-            className="grid lg:grid-cols-12 gap-12 items-center group"
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
           >
-            <div 
+            {/* Image */}
+            <div
               onClick={() => setActiveIdx(activeIdx === idx ? null : idx)}
-              className="group lg:col-span-7 relative aspect-video overflow-hidden rounded-[2rem] md:rounded-[3rem] cursor-pointer"
-              style={{ backgroundColor: 'var(--glass-bg)', border: '1px solid var(--glass-border)' }}
+              className="lg:col-span-7 relative w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[360px] overflow-hidden rounded-2xl cursor-pointer"
             >
               <motion.img
                 src={project.image}
                 alt={project.title}
                 whileHover={{ scale: 1.05 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full h-full object-cover transition-transform duration-1000"
+                transition={{ duration: 0.6 }}
+                className="w-full h-full object-cover"
               />
-              
-              {/* Overlay with glass effect */}
-              <div className={cn(
-                "absolute inset-0 bg-black/40 backdrop-blur-md transition-all duration-500 flex items-center justify-center gap-6",
-                activeIdx === idx ? "opacity-100 pointer-events-auto" : "opacity-0 lg:group-hover:opacity-100 pointer-events-none lg:group-hover:pointer-events-auto"
-              )}>
-                 <Magnetic strength={0.2}>
-                   <a 
-                     href={project.live} 
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     className="flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-white text-black rounded-full font-black text-xs md:text-sm uppercase tracking-widest hover:bg-accent transition-all transform hover:scale-105 shadow-2xl"
-                   >
-                    <span>LIVE</span>
-                    <ExternalLink size={18} />
+
+              {/* Overlay */}
+              <div
+                className={cn(
+                  'absolute inset-0 bg-black/60 flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-300',
+                  activeIdx === idx ? 'opacity-100' : 'opacity-0 hover:opacity-100'
+                )}
+              >
+                <Magnetic>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 bg-white text-black rounded-full text-xs font-bold flex items-center gap-2"
+                  >
+                    LIVE <ExternalLink size={14} />
                   </a>
-                 </Magnetic>
-                 
-                 <Magnetic strength={0.2}>
-                   <a 
-                     href={project.github}
-                     target="_blank"
-                     rel="noopener noreferrer" 
-                     className="flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-md text-white border border-white/10 rounded-full font-black text-xs md:text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all transform hover:scale-105 shadow-2xl"
-                   >
-                    <span>CODE</span>
-                    <Github size={18} />
-                   </a>
-                 </Magnetic>
+                </Magnetic>
+
+                <Magnetic>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 border border-white text-white rounded-full text-xs font-bold flex items-center gap-2"
+                  >
+                    CODE <Github size={14} />
+                  </a>
+                </Magnetic>
               </div>
-              
-              {/* Parallax Label Tag */}
-              <div className="absolute top-6 left-6 p-1 px-4 bg-black/50 backdrop-blur-xl border border-white/10 rounded-full text-[10px] font-black tracking-widest text-white/50 group-hover:text-accent transition-colors">
+
+              {/* Tag */}
+              <div className="absolute top-3 left-3 text-[10px] px-3 py-1 bg-black/60 rounded-full text-white">
                 PROJECT {idx + 1}
               </div>
             </div>
 
-            <div className="lg:col-span-5 space-y-10">
-              <div className="flex gap-4">
+            {/* Content */}
+            <div className="lg:col-span-5 space-y-4">
+              <div className="flex flex-wrap gap-2">
                 {project.tech.map((t) => (
-                  <span key={t} className="text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full group-hover:border-accent/20 group-hover:text-accent transition-all duration-500" style={{ color: 'var(--text-tertiary)', backgroundColor: 'var(--glass-bg)', border: '1px solid var(--glass-border)' }}>
+                  <span
+                    key={t}
+                    className="text-[10px] px-3 py-1 border rounded-full"
+                  >
                     {t}
                   </span>
                 ))}
               </div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black group-hover:text-accent transition-colors leading-[1.1] tracking-tighter font-display break-words" style={{ color: 'var(--text-primary)' }}>
+
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 {project.title}
               </h3>
-              <p className="font-bold text-xs md:text-sm uppercase tracking-[0.2em] leading-loose max-w-md" style={{ color: 'var(--text-tertiary)' }}>
+
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                 {project.description}
               </p>
-              
-              <motion.div 
-                 initial={{ width: 0 }}
-                 whileInView={{ width: "100px" }}
-                 transition={{ duration: 1, delay: 0.5 }}
-                 className="h-1 bg-accent/20 rounded-full group-hover:bg-accent transition-colors duration-500" 
-              />
+
+              <div className="h-[2px] w-16 bg-gray-400" />
             </div>
           </motion.div>
         ))}

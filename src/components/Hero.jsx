@@ -78,7 +78,7 @@ const Hero = ({ show }) => {
 
             <Magnetic>
               <a
-                href="/resume.pdf"
+                href="/resume of soriful.pdf"
                 download
                 className="px-6 py-3 bg-white text-black rounded-full text-sm flex items-center gap-2 w-full sm:w-auto justify-center"
               >

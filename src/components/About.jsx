@@ -3,103 +3,95 @@ import { motion } from 'framer-motion';
 import { Globe, Lightbulb, Zap, Rocket, GraduationCap } from 'lucide-react';
 
 const About = () => {
-    return (
-        <section id="about" className="section-padding py-24 md:py-40">
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-                <motion.div
-                    initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
-                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    viewport={{ once: true }}
-                >
-                    <h2 className="text-xl md:text-2xl lg:text-4xl font-black mb-8 uppercase font-display break-words tracking-tighter" style={{ color: 'var(--text-primary)' }}>
-                        ABOUT <span style={{ color: 'var(--accent-color)' }}> </span>ME<span style={{ color: 'var(--accent-color)' }}>.</span>
-                    </h2>
-                    <div className="space-y-6 md:space-y-10 text-base md:text-l leading-relaxed font-medium tracking-widest" style={{ color: 'var(--text-tertiary)' }}>
-                        <p>
-                            Hi! I’m a passionate MERN Stack Developer who began exploring the inner workings
-                            of websites and applications out of sheer curiosity. My programming journey
-                            started with learning the fundamentals of HTML and CSS, which helped me
-                            understand how the web works. As my interest grew, I moved on to JavaScript and
-                            eventually started building dynamic applications using React, Node.js, Express,
-                            and MongoDB.
-                        </p>
-                        <p>
-                            I enjoy working on projects where I can combine logic with creativity. Problem-solving and turning ideasinto functional digital products are the aspects of development I enjoy the most. <br /><br />
+  return (
+    <section
+      id="about"
+      className="px-4 sm:px-6 md:px-10 lg:px-20 py-16 md:py-24 lg:py-32"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 items-start">
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-black mb-6 md:mb-8 uppercase tracking-tight">
+            ABOUT ME<span className="text-accent">.</span>
+          </h2>
 
-                            Outside of coding, I love traveling and exploring new places, which refreshes my
-                            mind and inspires creativity. I also enjoy learning new technologies and staying
-                            up to date with modern development trends. I consider myself a continuous
-                            learner with a strong work ethic and a collaborative mindset.
-                        </p>
-                        <p className="pl-6 md:pl-8 py-3 font-black rounded-r-2xl" style={{ borderLeft: '4px solid var(--accent-color)', color: 'var(--text-primary)', backgroundColor: 'var(--glass-bg)' }}>
-                            FULLY EQUIPPED FOR GLOBAL REMOTE COLLABORATION.
-                        </p>
-                    </div>
+          <div className="space-y-4 md:space-y-6 text-sm sm:text-base leading-relaxed text-gray-400">
+            <p>
+              Hi! I’m a passionate MERN Stack Developer who began exploring the inner workings
+              of websites and applications out of curiosity. I started with HTML & CSS and later
+              moved to JavaScript, React, Node.js, Express, and MongoDB.
+            </p>
 
-                    <div className="mt-12 pt-10" style={{ borderTop: '1px solid var(--border-color)' }}>
-                        <h4 className="text-[10px] font-black tracking-[0.4em] uppercase mb-6 flex items-center gap-3" style={{ color: 'var(--accent-color)' }}>
-                            <GraduationCap size={14} /> EDUCATION
-                        </h4>
-                        <div className="space-y-3">
-                            <div>
-                                <p className="font-black text-sm md:text-md tracking-tighter font-display" style={{ color: 'var(--text-primary)' }}>
-                                    Studying at B.Sc - Honours in Botany at Govt.Titumir College, Dhaka University
-                                </p>
-                                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-1">
-                                    <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--text-tertiary)' }}>
-                                        Dhaka University, Dhaka, Bangladesh
-                                    </p>
-                                    <span className="hidden sm:block w-1 h-1 rounded-full" style={{ backgroundColor: 'var(--border-color)' }} />
-                                    <p className="text-[10px] font-black tracking-widest uppercase" style={{ color: 'var(--accent-color)', opacity: 0.6 }}>
-                                        2022 - PRESENT
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
+            <p>
+              I enjoy solving problems and turning ideas into real-world applications. Outside
+              coding, I love traveling and learning new technologies.
+            </p>
 
-                <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-8 h-full"
-                >
-                    {[
-                        { icon: <Globe className="w-8 h-8" style={{ color: 'var(--accent-color)' }} />, title: 'GLOBAL READY', desc: 'Remote collaboration across time zones' },
-                        { icon: <Zap className="w-8 h-8" style={{ color: 'var(--accent-color)' }} />, title: 'FAST ADAPTATION', desc: 'Swiftly mastering new tech ecosystems' },
-                        { icon: <Lightbulb className="w-8 h-8" style={{ color: 'var(--accent-color)' }} />, title: 'PROBLEM FIXER', desc: 'Elegant solutions for complex logic' },
-                        { icon: <Rocket className="w-8 h-8" style={{ color: 'var(--accent-color)' }} />, title: 'RESULT DRIVEN', desc: 'Delivering production-grade excellence' },
-                    ].map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{
-                                opacity: { duration: 1, delay: idx * 0.15 },
-                                filter: { duration: 1, delay: idx * 0.15 }
-                            }}
-                            viewport={{ once: true }}
-                            whileHover={{
-                                y: -10,
-                                scale: 1.05,
-                                transition: { duration: 0.4 }
-                            }}
-                            className="p-8 md:p-10 flex flex-col items-start text-left group transition-all rounded-[3rem]"
-                            style={{
-                                backgroundColor: 'var(--glass-bg)',
-                                backdropFilter: 'blur(12px)',
-                                border: '1px solid var(--glass-border)',
-                            }}
-                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--glass-bg)'}
-                        >
-                            <div className="mb-6 md:mb-8 p-3 md:p-4 rounded-2xl group-hover:bg-accent/10 transition-colors duration-500" style={{ backgroundColor: 'var(--glass-bg)' }}>{item.icon}</div>
-                            <h3 className="font-black text-md mb-3 md:mb-4 tracking-tighter uppercase font-display break-words group-hover:text-accent transition-colors" style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
-                            <p className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] leading-loose" style={{ color: 'var(--text-tertiary)' }}>{item.desc}</p>
-                        </motion.div>
-                    ))}
-                </motion.div>
+            <p className="pl-4 py-2 border-l-4 border-accent text-white bg-white/5 rounded">
+              FULLY EQUIPPED FOR GLOBAL REMOTE COLLABORATION.
+            </p>
+          </div>
+
+          {/* Education */}
+          <div className="mt-8 md:mt-12 pt-6 border-t">
+            <h4 className="text-xs font-bold tracking-widest uppercase mb-4 flex items-center gap-2 text-accent">
+              <GraduationCap size={14} /> EDUCATION
+            </h4>
+
+            <p className="text-sm md:text-base font-semibold">
+              B.Sc (Honours) in Botany – Govt. Titumir College
+            </p>
+
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-1 text-xs text-gray-400">
+              <span>Dhaka University, Bangladesh</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="text-accent">2022 - Present</span>
             </div>
-        </section>
-    );
+          </div>
+        </motion.div>
+
+        {/* Right Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          {[
+            { icon: Globe, title: 'GLOBAL READY', desc: 'Remote collaboration' },
+            { icon: Zap, title: 'FAST ADAPTATION', desc: 'Quick tech learning' },
+            { icon: Lightbulb, title: 'PROBLEM SOLVER', desc: 'Logical solutions' },
+            { icon: Rocket, title: 'RESULT DRIVEN', desc: 'Production ready work' },
+          ].map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+                className="p-4 sm:p-6 md:p-8 rounded-2xl border bg-white/5"
+              >
+                <div className="mb-3">
+                  <Icon className="w-6 h-6 text-accent" />
+                </div>
+
+                <h3 className="text-sm md:text-base font-bold mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs md:text-sm text-gray-400">
+                  {item.desc}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

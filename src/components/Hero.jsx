@@ -74,20 +74,13 @@ const Hero = ({ show }) => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
           >
-            <Magnetic>
-              <a
-                href="#projects"
-                className="px-6 py-3 bg-white text-black rounded-full text-sm font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
-              >
-                Projects <ArrowRight size={16} />
-              </a>
-            </Magnetic>
+
 
             <Magnetic>
               <a
                 href="/resume.pdf"
                 download
-                className="px-6 py-3 border rounded-full text-sm flex items-center gap-2 w-full sm:w-auto justify-center"
+                className="px-6 py-3 bg-white text-black rounded-full text-sm flex items-center gap-2 w-full sm:w-auto justify-center"
               >
                 Resume <Download size={16} />
               </a>
@@ -95,8 +88,17 @@ const Hero = ({ show }) => {
 
             <Magnetic>
               <a
+                href="#projects"
+                className="px-6 py-3 border rounded-full text-sm font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
+              >
+                Projects <ArrowRight size={16} />
+              </a>
+            </Magnetic>
+
+            <Magnetic>
+              <a
                 href="#contact"
-                className="text-sm flex items-center gap-2"
+                className="px-6 py-3 text-sm flex border rounded-full items-center gap-2"
               >
                 Contact <Mail size={16} />
               </a>

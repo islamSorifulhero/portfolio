@@ -43,6 +43,7 @@ const Navbar = ({ show }) => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <motion.a
+          href='#home'
           initial={{ opacity: 0, x: -20 }}
           animate={show ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}

@@ -1,17 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Download } from 'lucide-react';
-import soriful from '../assets/soriful.png.jpg'
+import soriful from '../assets/soriful.png.jpg';
 import Magnetic from './Magnetic';
 
 const Hero = ({ show }) => {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
+    // disable heavy effect on small devices
+    if (window.innerWidth < 768) return;
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
-    const x = (clientX - innerWidth / 2) / 25;
-    const y = (clientY - innerHeight / 2) / 25;
+    const x = (clientX - innerWidth / 2) / 30;
+    const y = (clientY - innerHeight / 2) / 30;
     setMousePosition({ x, y });
   };
 
@@ -19,138 +21,108 @@ const Hero = ({ show }) => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3,
-      },
+      transition: { staggerChildren: 0.12, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 1,
-        ease: [0.16, 1, 0.3, 1],
-      },
+      transition: { duration: 0.7 },
     },
   };
 
   return (
-    <section 
-      id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 lg:py-0"
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 md:px-10 lg:px-20 py-16 md:py-24"
       onMouseMove={handleMouseMove}
     >
-
-      <div className="section-padding relative z-10 grid lg:grid-cols-2 gap-20 lg:gap-32 items-center w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 items-center w-full">
+        {/* Text */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={show ? "visible" : "hidden"}
-          className="text-center lg:text-left"
+          animate={show ? 'visible' : 'hidden'}
+          className="text-center lg:text-left order-2 lg:order-1"
         >
-          <motion.span 
-            variants={itemVariants} 
-            className="text-[10px] md:text-sm font-black tracking-[0.5em] uppercase mb-6 block py-2 px-6 rounded-full w-fit mx-auto lg:mx-0"
-            style={{
-              color: 'var(--accent-color)',
-              border: '1px solid var(--accent-color)',
-              opacity: 0.8,
-              backgroundColor: 'var(--glass-bg)',
-            }}
+          <motion.span
+            variants={itemVariants}
+            className="text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-4 inline-block px-4 py-1 rounded-full border"
           >
             Full Stack Developer
           </motion.span>
-          
-          <motion.div variants={itemVariants} className="mb-8 w-full max-w-full overflow-hidden">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-black leading-[1.1] tracking-tighter mb-4 font-display break-words" style={{ color: 'var(--text-primary)' }}>MD<span style={{ color: 'var(--accent-color)' }}>.</span> SORIFUL <br /> ISLAM
-            </h1>
-          </motion.div>
 
-          <motion.p 
+          <motion.h1
             variants={itemVariants}
-            className="text-base md:text-lg font-medium mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed uppercase tracking-widest"
-            style={{ color: 'var(--text-tertiary)' }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4"
           >
-            Specializing in <span style={{ color: 'var(--accent-color)' }}>React.js</span>, <span style={{ color: 'var(--accent-color)' }}>Next.js</span>, and the <span style={{ color: 'var(--accent-color)' }}>MERN Stack</span>.<br className="hidden md:block" />I build responsive, high-performance web applications with clean code and exceptional user experience.
+            MD. <span className="text-accent">SORIFUL</span> ISLAM
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-sm sm:text-base md:text-lg mb-8 max-w-xl mx-auto lg:mx-0 text-gray-400"
+          >
+            Specializing in React.js, Next.js, and the MERN Stack. I build responsive,
+            high-performance web applications with clean code.
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 w-full"
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
           >
-            <Magnetic strength={0.2}>
-              <motion.a 
-                href="#projects" 
-                className="px-8 py-5 bg-white text-black rounded-full font-bold text-base transition-all transform hover:bg-accent hover:text-black active:scale-95 shadow-2xl flex items-center gap-2 w-full sm:w-auto justify-center tracking-normal"
+            <Magnetic>
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-white text-black rounded-full text-sm font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
               >
-                PROJECTS
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
-              </motion.a>
-            </Magnetic>
-            
-            <Magnetic strength={0.3}>
-              <a 
-                href="/resume.pdf" 
-                download="MD. Soriful Islam-Resume.pdf" 
-                className="px-8 py-5 rounded-full text-xs font-black tracking-[0.2em] uppercase transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
-                style={{
-                  border: '1px solid var(--border-color)',
-                  color: 'var(--text-primary)',
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--glass-bg)'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-              >
-                RESUME <Download size={16} />
+                Projects <ArrowRight size={16} />
               </a>
             </Magnetic>
 
-            <Magnetic strength={0.4}>
-              <a 
-                href="#contact" 
-                className="text-xs font-black tracking-[0.2em] uppercase transition-colors flex items-center gap-2 group whitespace-nowrap"
-                style={{ color: 'var(--text-primary)' }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}
+            <Magnetic>
+              <a
+                href="/resume.pdf"
+                download
+                className="px-6 py-3 border rounded-full text-sm flex items-center gap-2 w-full sm:w-auto justify-center"
               >
-                CONTACT <Mail size={16} className="group-hover:translate-x-1 transition-transform" />
+                Resume <Download size={16} />
+              </a>
+            </Magnetic>
+
+            <Magnetic>
+              <a
+                href="#contact"
+                className="text-sm flex items-center gap-2"
+              >
+                Contact <Mail size={16} />
               </a>
             </Magnetic>
           </motion.div>
         </motion.div>
 
-        {/* Hero Portrait Image */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9, y: 50 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
           style={{ x: mousePosition.x, y: mousePosition.y }}
-          className="relative w-full flex justify-center lg:justify-end lg:pr-12 order-first lg:order-last mb-12 lg:mb-0 -mt-38 md:mt-0"
+          className="flex justify-center lg:justify-end order-1 lg:order-2"
         >
-          <div 
-            className="relative z-10 w-full max-w-[350px] md:max-w-[450px] lg:max-w-[550px] aspect-square transition-all duration-700 pointer-events-none"
-            style={{
-              maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
-              WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
-            }}
-          >
-            <motion.img 
+          <div className="w-[220px] sm:w-[260px] md:w-[320px] lg:w-[420px]">
+            <img
               src={soriful}
-              alt="soriful islalam" 
-              // style={{ scale: 1.2, x: -mousePosition.x / 2, y: -mousePosition.y / 2 }}
-              className="w-full h-full object-contain transition-transform duration-700 pointer-events-none"
+              alt="Soriful"
+              className="w-full h-auto object-contain"
             />
           </div>
-          {/* Decorative Elements */}
         </motion.div>
       </div>
 
-      {/* Subtle Bottom Accent */}
-      <div className="absolute bottom-0 left-0 w-full h-px" style={{ background: 'linear-gradient(to right, transparent, var(--border-color), transparent)' }} />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
     </section>
   );
 };

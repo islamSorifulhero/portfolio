@@ -25,7 +25,7 @@ const projects = [
     github: 'https://github.com/islamSorifulhero/client',
   },
   {
-    title: 'appverse',
+    title: 'Appverse',
     description: 'It serves as the official app store.',
     tech: ['REACT', 'FIREBASE', 'NODE', 'EXPRESS'],
     image: project3,

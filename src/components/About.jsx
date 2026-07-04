@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe, Lightbulb, Zap, Rocket, GraduationCap } from 'lucide-react';
+import { Globe, Lightbulb, Zap, Rocket, GraduationCap, Code2, Users } from 'lucide-react';
 
 const About = () => {
   return (
@@ -22,14 +22,20 @@ const About = () => {
 
           <div className="space-y-4 md:space-y-6 text-sm sm:text-base leading-relaxed text-gray-400">
             <p>
-              Hi! I’m a passionate MERN Stack Developer who began exploring the inner workings
-              of websites and applications out of curiosity. I started with HTML & CSS and later
-              moved to JavaScript, React, Node.js, Express, and MongoDB.
+              Hi! I'm a passionate MERN Stack Developer who started my journey with HTML and
+              CSS and gradually learned JavaScript, React, Node.js, Express.js, MongoDB,
+              and Prisma by building real-world projects.
             </p>
 
             <p>
-              I enjoy solving problems and turning ideas into real-world applications. Outside
-              coding, I love traveling and learning new technologies.
+              I enjoy creating responsive full-stack web applications, solving real-world
+              problems, and writing clean, scalable code that delivers a great user
+              experience.
+            </p>
+
+            <p>
+              Outside programming, I enjoy traveling, Playing Cricket, Watching Football, and continuously
+              learning to become a better developer and teammate.
             </p>
 
             <p className="pl-4 py-2 border-l-4 border-accent text-white bg-white/5 rounded">
@@ -50,7 +56,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-1 text-xs text-gray-400">
               <span>Dhaka University, Bangladesh</span>
               <span className="hidden sm:inline">•</span>
-              <span className="text-accent">2022 - Present</span>
+              <span className="text-accent">2023 - Present</span>
             </div>
           </div>
         </motion.div>
@@ -62,6 +68,8 @@ const About = () => {
             { icon: Zap, title: 'FAST ADAPTATION', desc: 'Quick tech learning' },
             { icon: Lightbulb, title: 'PROBLEM SOLVER', desc: 'Logical solutions' },
             { icon: Rocket, title: 'RESULT DRIVEN', desc: 'Production ready work' },
+            { icon: Code2, title: "CLEAN CODE", desc: "Maintainable solutions" },
+            { icon: Users, title: "TEAM PLAYER", desc: "Effective collaboration" }
           ].map((item, idx) => {
             const Icon = item.icon;
             return (

@@ -1,19 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Instagram } from 'lucide-react';
+import { Github, Linkedin, Facebook, Mail, Instagram } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const socialLinks = [
+    { icon: <Mail size={18} />, href: "mailto:islamsoriful.hero@gmail.com" },
     { icon: <Github size={18} />, href: "https://github.com/islamSorifulhero" },
     { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/md-soriful-islam-hero2" },
-    { icon: <Twitter size={18} />, href: "https://twitter.com" },
-    { icon: <Mail size={18} />, href: "islamsoriful.hero@gmail.com" },
+    {
+      icon: <Facebook size={18} />,
+      href: "https://www.facebook.com/islamsoriful.hero"
+    },
+    {
+      icon: <FaWhatsapp size={18} />,
+      href: 'https://wa.me/8801770886813',
+    }
   ];
 
   return (
     <footer className="py-2" style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)' }}>
       <div className="section-padding flex flex-col md:flex-row items-center justify-between gap-8">
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center md:items-start"
@@ -28,7 +36,7 @@ const Footer = () => {
 
         <div className="flex items-center gap-6">
           {socialLinks.map((link, idx) => (
-            <motion.a 
+            <motion.a
               key={idx}
               href={link.href}
               target="_blank"
@@ -45,7 +53,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           className="flex flex-col items-center md:items-end text-[10px] font-bold uppercase tracking-widest gap-2"

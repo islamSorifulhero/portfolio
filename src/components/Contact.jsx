@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Phone } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone, Facebook } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -22,9 +23,9 @@ const Contact = () => {
             LET'S CONNECT
           </h3>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4">
+          {/* <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4">
             HIRE<span className="text-accent">.</span>
-          </h2>
+          </h2> */}
 
           <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 max-w-md">
             I am open to remote opportunities. Let's build something amazing together.
@@ -51,10 +52,22 @@ const Contact = () => {
                 href: 'https://www.linkedin.com/in/md-soriful-islam-hero2',
               },
               {
-                label: 'PHONE',
+                label: 'FACEBOOK',
+                value: '@islamsoriful.hero',
+                icon: <Facebook size={18} />,
+                href: 'https://www.facebook.com/islamsoriful.hero',
+              },
+              {
+                label: 'WHATSAPP',
                 value: '01770-886813',
+                icon: <FaWhatsapp size={18} />,
+                href: 'https://wa.me/8801770886813',
+              },
+              {
+                label: 'PHONE',
+                value: '01518-713398',
                 icon: <Phone size={18} />,
-                href: 'tel:01770886813',
+                href: 'tel:01518713398',
               },
             ].map((item, i) => (
               <a

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Download } from 'lucide-react';
 // import soriful from '../assets/soriful.png.jpg';
-import soriful from '../assets/soriful-black.png';
+import soriful from '../assets/soriful-black.webp';
 import Magnetic from './Magnetic';
 
 const Hero = ({ show }) => {

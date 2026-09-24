@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ChevronRight, X, Calendar, Code, Rocket } from 'lucide-react';
-import project1 from '../assets/project1.jpg';
-import project2 from '../assets/project2.jpg';
-import project3 from '../assets/Project3.jpg';
+import project1 from '../assets/project1.webp';
+import project2 from '../assets/project2.webp';
+import project3 from '../assets/Project3.webp';
 import Magnetic from './Magnetic';
 import { cn } from '../lib/utils';
 
